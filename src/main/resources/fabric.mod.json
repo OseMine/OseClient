@@ -3,16 +3,16 @@
 	"id": "oseclient",
 	"version": "${version}",
 	"name": "OseClient",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is an FabricMC based Minecraft 1.20.X Client",
 	"authors": [
-		"Me!"
+		"OseMine"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"de.osemine.oseclient.OseClient"
