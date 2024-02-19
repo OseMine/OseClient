@@ -11,6 +11,15 @@ base {
 }
 
 repositories {
+	maven {
+		url 'https://maven.terraformersmc.com/releases/'
+	}
+	// Füge andere Repositories hier hinzu, falls benötigt
+	mavenCentral()
+	maven { url 'https://libraries.minecraft.net/' }
+	maven { url 'https://repo.maven.apache.org/maven2' }
+	maven { url 'https://maven.fabricmc.net/' }
+
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -27,7 +36,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
+	modApi "com.terraformersmc:modmenu:8.0.1"
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
@@ -84,5 +93,9 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+		maven {
+			url 'https://maven.terraformersmc.com/releases/'
+		}
+		// Füge andere Repositories hier hinzu, falls benötigt
 	}
 }

@@ -8,8 +8,8 @@
 		"OseMine"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://osemine.de/",
+		"sources": "https://github.com/OseMine/OseClient"
 	},
 	"license": "MIT",
 	"environment": "client",
@@ -17,7 +17,12 @@
 		"main": [
 			"de.osemine.oseclient.OseClient"
 		],
-		"client": ["de.osemine.oseclient.client.OseClientClient"],
+		"client": [
+			"de.osemine.oseclient.client.OseClientClient"
+		],
+		"modmenu": [
+			"de.osemine.oseclient.client.ConfigScreen"
+		],
 		"fabric-datagen": [
 			"de.osemine.oseclient.OseClientDataGenerator"
 		]
@@ -33,5 +38,13 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/54wA3NMAMV"
+			},
+			"parent": "minecraft"
+		}
 	}
 }
